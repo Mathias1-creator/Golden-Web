@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import { Phone, Mail, Clock, MapPin, Paperclip, Star } from 'lucide-react';
+import { useEffect } from 'react';
+import { Phone, Mail, Clock, MapPin, Star } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 
 const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-contact.png`;
@@ -111,23 +111,13 @@ function FormSelect({ label, required, placeholder, value, onChange, options }) 
 }
 
 export default function Contact() {
-  const fileRef = useRef(null);
-  const [form, setForm] = useState({
-    name: '', phone: '', email: '', city: '',
-    projectType: '', service: '', preferredDate: '',
-    preferredTime: '', contactPref: '', description: '',
-    referral: '',
-  });
-  const [files, setFiles] = useState([]);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (field) => (e) => setForm({ ...form, [field]: e.target.value });
-  const handleFiles = (e) => setFiles(Array.from(e.target.files));
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  useEffect(() => {
+    const s = document.createElement('script');
+    s.src = 'https://tally.so/widgets/embed.js';
+    s.async = true;
+    document.body.appendChild(s);
+    return () => document.body.removeChild(s);
+  }, []);
 
   return (
     <>
@@ -215,135 +205,16 @@ export default function Contact() {
             </div>
           </ScrollReveal>
 
-          {/* Right — Form */}
+          {/* Right — Tally Form */}
           <ScrollReveal delay={0.15}>
-            {submitted ? (
-              <div className="glass-card p-12 text-center">
-                <h3 className="font-heading text-3xl text-white mb-4">THANK YOU</h3>
-                <p className="font-body text-base" style={{ color: '#a0a0a0' }}>
-                  Your request has been submitted. We will be in touch within 1 business day to schedule your free consultation.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <p className="font-body text-xs" style={{ color: '#a0a0a0' }}>
-                  Fields marked <span style={{ color: '#c9a84c' }}>*</span> are required.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormInput label="Full Name" required placeholder="John Smith" value={form.name} onChange={handleChange('name')} />
-                  <FormInput label="Phone Number" required type="tel" placeholder="(559) 000-0000" value={form.phone} onChange={handleChange('phone')} />
-                </div>
-
-                <FormInput label="Email Address" required type="email" placeholder="you@example.com" value={form.email} onChange={handleChange('email')} />
-                <FormInput label="City or Location" placeholder="Fresno, CA" value={form.city} onChange={handleChange('city')} />
-
-                {/* Commercial or Residential */}
-                <div>
-                  <Label required>Project Type</Label>
-                  <div className="flex gap-4">
-                    {['Residential', 'Commercial'].map((type) => (
-                      <label key={type} className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="projectType"
-                          value={type}
-                          checked={form.projectType === type}
-                          onChange={handleChange('projectType')}
-                          style={{ accentColor: '#c9a84c' }}
-                        />
-                        <span className="font-body text-sm" style={{ color: '#e0e0e0' }}>{type}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <FormSelect
-                  label="Service Interested In"
-                  required
-                  placeholder="Select a service..."
-                  value={form.service}
-                  onChange={handleChange('service')}
-                  options={SERVICES_OPTIONS}
-                />
-
-                {/* Date + Time */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <FormInput label="Preferred Date" type="date" value={form.preferredDate} onChange={handleChange('preferredDate')} />
-                  <FormSelect
-                    label="Preferred Time"
-                    placeholder="Select a time..."
-                    value={form.preferredTime}
-                    onChange={handleChange('preferredTime')}
-                    options={['Morning (7AM – 12PM)', 'Afternoon (12PM – 5PM)']}
-                  />
-                </div>
-
-                <FormSelect
-                  label="Preferred Contact Method"
-                  placeholder="How should we reach you?"
-                  value={form.contactPref}
-                  onChange={handleChange('contactPref')}
-                  options={CONTACT_PREF}
-                />
-
-                <div>
-                  <Label>Project Description</Label>
-                  <textarea
-                    placeholder="Describe your project, ideas, or questions..."
-                    value={form.description}
-                    onChange={handleChange('description')}
-                    rows={4}
-                    style={inputStyle}
-                    onFocus={(e) => { e.target.style.borderColor = '#c9a84c'; e.target.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.15)'; }}
-                    onBlur={(e) => { e.target.style.borderColor = 'rgba(201,168,76,0.2)'; e.target.style.boxShadow = 'none'; }}
-                  />
-                </div>
-
-                {/* File upload */}
-                <div>
-                  <Label>Upload Photos or Files</Label>
-                  <div
-                    className="flex items-center gap-3 cursor-pointer px-4 py-3 rounded-[2px] transition-all duration-300"
-                    style={{ border: '1px dashed rgba(201,168,76,0.35)', background: '#111111' }}
-                    onClick={() => fileRef.current?.click()}
-                  >
-                    <Paperclip className="w-5 h-5 shrink-0" style={{ color: '#c9a84c' }} />
-                    <span className="font-body text-sm" style={{ color: '#a0a0a0' }}>
-                      {files.length > 0
-                        ? files.map((f) => f.name).join(', ')
-                        : 'Click to attach photos or project files'}
-                    </span>
-                  </div>
-                  <input
-                    ref={fileRef}
-                    type="file"
-                    multiple
-                    accept="image/*,.pdf,.doc,.docx"
-                    onChange={handleFiles}
-                    className="hidden"
-                  />
-                </div>
-
-                <FormSelect
-                  label="How Did You Hear About Us?"
-                  placeholder="Select one..."
-                  value={form.referral}
-                  onChange={handleChange('referral')}
-                  options={REFERRAL_OPTIONS}
-                />
-
-                <button
-                  type="submit"
-                  className="w-full font-heading text-xl uppercase tracking-[2px] py-4 rounded-[2px] transition-all duration-300"
-                  style={{ background: '#c9a84c', color: '#0a0a0a', border: '1px solid #c9a84c' }}
-                  onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 15px rgba(201,168,76,0.4)'; e.currentTarget.style.background = '#d4b65e'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.background = '#c9a84c'; }}
-                >
-                  REQUEST FREE CONSULTATION
-                </button>
-              </form>
-            )}
+            <iframe
+              data-tally-src="https://tally.so/embed/D4bQ6b?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              loading="lazy"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              title="Request a Free Consultation"
+            />
           </ScrollReveal>
         </div>
       </section>
