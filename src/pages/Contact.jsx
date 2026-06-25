@@ -270,7 +270,13 @@ export default function Contact() {
                 {/* Date + Time */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <FormInput label="Preferred Date" type="date" value={form.preferredDate} onChange={handleChange('preferredDate')} />
-                  <FormInput label="Preferred Time" type="time" value={form.preferredTime} onChange={handleChange('preferredTime')} />
+                  <FormSelect
+                    label="Preferred Time"
+                    placeholder="Select a time..."
+                    value={form.preferredTime}
+                    onChange={handleChange('preferredTime')}
+                    options={['Morning (7AM – 12PM)', 'Afternoon (12PM – 5PM)', 'Evening (5PM – 8PM)']}
+                  />
                 </div>
 
                 <FormSelect
