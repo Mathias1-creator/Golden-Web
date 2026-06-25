@@ -109,22 +109,20 @@ export default function About() {
             We bring Golden Heritage craftsmanship to communities across the Valley.
           </p>
         </ScrollReveal>
-        <ScrollReveal className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {CITIES.map((city) => (
-              <div
-                key={city}
-                className="flex items-center gap-3 py-3 px-4 rounded-[2px]"
-                style={{ background: 'rgba(201,168,76,0.05)', borderLeft: '2px solid #c9a84c' }}
-              >
-                <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: '#c9a84c' }} />
-                <span className="font-body text-sm uppercase tracking-[2px]" style={{ color: '#e0e0e0' }}>
+        <ScrollReveal className="max-w-3xl mx-auto text-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-0 gap-y-4">
+            {CITIES.map((city, i) => (
+              <span key={city} className="flex items-center">
+                <span className="font-heading text-lg tracking-[2px]" style={{ color: '#e0e0e0' }}>
                   {city}
                 </span>
-              </div>
+                {i < CITIES.length - 1 && (
+                  <span className="mx-4 text-xl" style={{ color: '#c9a84c' }}>·</span>
+                )}
+              </span>
             ))}
           </div>
-          <p className="font-body text-base text-center mt-8" style={{ color: '#a0a0a0' }}>
+          <p className="font-body text-base mt-10" style={{ color: '#a0a0a0' }}>
             Don't see your city? Contact us — we likely serve your area.
           </p>
         </ScrollReveal>
