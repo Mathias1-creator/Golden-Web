@@ -9,7 +9,7 @@ import FAQ from './pages/FAQ';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Golden-Web">
       <Routes>
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
