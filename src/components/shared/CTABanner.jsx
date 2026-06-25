@@ -14,10 +14,7 @@ export default function CTABanner() {
         <h2 className="font-heading text-white mb-4" style={{ fontSize: 'clamp(40px, 5vw, 64px)' }}>
           READY TO BUILD YOUR DREAM LANDSCAPE?
         </h2>
-        <p className="font-body text-lg mb-8" style={{ color: '#a0a0a0' }}>
-          Serving Fresno, Clovis, Visalia, Tulare, Madera, and all of the Central Valley.
-        </p>
-        <Link to="/contact" className="btn-gold-fill">REQUEST A FREE QUOTE</Link>
+<Link to="/contact" className="btn-gold-fill">REQUEST A FREE QUOTE</Link>
       </ScrollReveal>
     </section>
   );
