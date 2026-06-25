@@ -82,7 +82,7 @@ export default function Header() {
 
           {/* Logo — center */}
           <Link to="/" className="flex-shrink-0">
-            <img src={LOGO} alt="Golden Heritage Landscape" style={{ height: 80 }} className="object-contain" />
+            <img src={LOGO} alt="Golden Heritage Landscape" style={{ height: 100 }} className="object-contain" />
           </Link>
 
           {/* Desktop nav — right */}
