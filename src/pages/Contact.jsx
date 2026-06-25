@@ -275,7 +275,7 @@ export default function Contact() {
                     placeholder="Select a time..."
                     value={form.preferredTime}
                     onChange={handleChange('preferredTime')}
-                    options={['Morning (7AM – 12PM)', 'Afternoon (12PM – 5PM)', 'Evening (5PM – 8PM)']}
+                    options={['Morning (7AM – 12PM)', 'Afternoon (12PM – 5PM)']}
                   />
                 </div>
 

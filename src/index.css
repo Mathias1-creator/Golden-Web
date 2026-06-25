@@ -71,6 +71,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Gold calendar icon on date inputs */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(72%) sepia(40%) saturate(600%) hue-rotate(5deg) brightness(95%);
+  cursor: pointer;
+}
+
 /* Gold button styles */
 .btn-gold-outline {
   border: 1px solid #c9a84c;
