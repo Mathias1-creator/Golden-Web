@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../shared/ScrollReveal';
 
-const PHOTO = '/images/service-landscape.png';
+const PHOTO = '/images/split-section.png';
 
 export default function SplitSection() {
   return (
