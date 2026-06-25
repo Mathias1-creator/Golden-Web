@@ -6,7 +6,6 @@ const HERO_IMG = '/images/hero-contact.png';
 
 const CONTACT_CARDS = [
   { icon: Phone, label: 'Phone', value: '(559) 912-8046', sub: null, href: 'tel:+15599128046' },
-  { icon: Phone, label: 'Cell', value: '(559) 394-3797', sub: null, href: 'tel:+15593943797' },
   { icon: Mail, label: 'Email', value: 'alberto@goldenhl.com', sub: null, href: 'mailto:alberto@goldenhl.com' },
   {
     icon: Clock, label: 'Hours', href: null,

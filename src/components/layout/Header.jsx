@@ -73,13 +73,21 @@ export default function Header() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-24">
-          <Link to="/">
-            <img src={LOGO} alt="Golden Heritage Landscape" style={{ height: 72 }} className="object-contain" />
+          {/* Desktop nav — left */}
+          <nav className="hidden md:flex items-center gap-8 flex-1">
+            {NAV_LINKS.slice(0, 3).map((link) => (
+              <NavLink key={link.path} link={link} isActive={location.pathname === link.path} />
+            ))}
+          </nav>
+
+          {/* Logo — center */}
+          <Link to="/" className="flex-shrink-0">
+            <img src={LOGO} alt="Golden Heritage Landscape" style={{ height: 80 }} className="object-contain" />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
+          {/* Desktop nav — right */}
+          <nav className="hidden md:flex items-center gap-8 flex-1 justify-end">
+            {NAV_LINKS.slice(3).map((link) => (
               <NavLink key={link.path} link={link} isActive={location.pathname === link.path} />
             ))}
           </nav>

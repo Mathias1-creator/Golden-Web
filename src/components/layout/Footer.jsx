@@ -16,7 +16,7 @@ export default function Footer() {
     <footer style={{ background: '#050505', borderTop: '1px solid #c9a84c' }}>
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <img src={LOGO} alt="Golden Heritage Landscape" style={{ height: 80 }} className="object-contain" />
+          <img src={LOGO} alt="Golden Heritage Landscape" style={{ height: 110 }} className="object-contain" />
           
           <nav className="flex flex-wrap items-center justify-center gap-6">
             {NAV_LINKS.map((link) => (

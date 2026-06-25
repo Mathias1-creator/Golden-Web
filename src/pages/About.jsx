@@ -101,14 +101,6 @@ export default function About() {
 
       {/* Service Area */}
       <section className="py-24 px-6" style={{ background: '#0d0d0d' }}>
-        <ScrollReveal className="text-center mb-12">
-          <h2 className="font-heading text-white" style={{ fontSize: 'clamp(32px, 4vw, 48px)' }}>
-            PROUDLY SERVING THE CENTRAL VALLEY
-          </h2>
-          <p className="font-body text-base mt-4" style={{ color: '#a0a0a0' }}>
-            We bring Golden Heritage craftsmanship to communities across the Valley.
-          </p>
-        </ScrollReveal>
         <ScrollReveal className="max-w-3xl mx-auto text-center">
           <div className="flex flex-wrap items-center justify-center gap-x-0 gap-y-4">
             {CITIES.map((city, i) => (
