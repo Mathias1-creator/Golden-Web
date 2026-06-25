@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const LOGO = '/images/logo.png';
+const LOGO = `${import.meta.env.BASE_URL}images/logo.png`;
 
 const NAV_LINKS = [
   { label: 'Home', path: '/' },

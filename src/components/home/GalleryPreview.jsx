@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from '../shared/ScrollReveal';
 
 const IMAGES = [
-  { src: '/images/gallery-1.png', alt: 'Custom stone patio hardscape' },
-  { src: '/images/gallery-2.png', alt: 'Lush residential garden planting' },
-  { src: '/images/gallery-3.png', alt: 'Outdoor pathway lighting design' },
-  { src: '/images/service-sod.png', alt: 'Premium synthetic turf lawn' },
-  { src: '/images/gallery-5.png', alt: 'Stone retaining wall with lighting' },
-  { src: '/images/gallery-9.png', alt: 'Custom fire pit with stone seating' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-1.png`, alt: 'Custom stone patio hardscape' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-2.png`, alt: 'Lush residential garden planting' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-3.png`, alt: 'Outdoor pathway lighting design' },
+  { src: `${import.meta.env.BASE_URL}images/service-sod.png`, alt: 'Premium synthetic turf lawn' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-5.png`, alt: 'Stone retaining wall with lighting' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-9.png`, alt: 'Custom fire pit with stone seating' },
 ];
 
 export default function GalleryPreview() {

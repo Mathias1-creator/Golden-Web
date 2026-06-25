@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-const LOGO = '/images/logo.png';
+const LOGO = `${import.meta.env.BASE_URL}images/logo.png`;
 
 const NAV_LINKS = [
   { label: 'Home', path: '/' },

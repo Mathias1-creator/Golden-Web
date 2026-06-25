@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { Phone, Mail, Clock, MapPin, Paperclip, Star } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 
-const HERO_IMG = '/images/hero-contact.png';
+const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-contact.png`;
 
 const CONTACT_CARDS = [
   { icon: Phone, label: 'Phone', value: '(559) 912-8046', sub: null, href: 'tel:+15599128046' },
