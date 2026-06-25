@@ -102,15 +102,14 @@ export default function About() {
       {/* Service Area */}
       <section className="py-24 px-6" style={{ background: '#0d0d0d' }}>
         <ScrollReveal className="max-w-3xl mx-auto text-center">
-          <div className="flex flex-wrap items-center justify-center gap-x-0 gap-y-4">
-            {CITIES.map((city, i) => (
-              <span key={city} className="flex items-center">
-                <span className="font-heading text-lg tracking-[2px]" style={{ color: '#e0e0e0' }}>
-                  {city}
-                </span>
-                {i < CITIES.length - 1 && (
-                  <span className="mx-4 text-xl" style={{ color: '#c9a84c' }}>·</span>
-                )}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {CITIES.map((city) => (
+              <span
+                key={city}
+                className="font-heading text-sm tracking-[2px] px-5 py-2 rounded-full"
+                style={{ border: '1px solid #c9a84c', color: '#c9a84c' }}
+              >
+                {city}
               </span>
             ))}
           </div>
