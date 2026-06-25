@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 88%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 88%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 88%;
+    --primary: 43 52% 54%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 0 0% 88%;
+    --muted: 0 0% 7%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 220 30% 18%;
+    --accent-foreground: 0 0% 88%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 43 52% 54% / 0.2;
+    --input: 0 0% 7%;
+    --ring: 43 52% 54%;
+    --chart-1: 43 52% 54%;
+    --chart-2: 220 30% 18%;
+    --chart-3: 0 0% 63%;
+    --chart-4: 43 52% 40%;
+    --chart-5: 220 30% 30%;
+    --radius: 2px;
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b65e;
+}
+
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gold button styles */
+.btn-gold-outline {
+  border: 1px solid #c9a84c;
+  color: #c9a84c;
+  background: transparent;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-gold-outline:hover {
+  background: #c9a84c;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px rgba(201,168,76,0.4);
+}
+
+.btn-gold-fill {
+  border: 1px solid #c9a84c;
+  color: #0a0a0a;
+  background: #c9a84c;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+.btn-gold-fill:hover {
+  background: #d4b65e;
+  box-shadow: 0 0 15px rgba(201,168,76,0.4);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.15);
+}
