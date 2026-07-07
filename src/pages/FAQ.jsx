@@ -4,7 +4,7 @@ import ScrollReveal from '../components/shared/ScrollReveal';
 import CTABanner from '../components/shared/CTABanner';
 import { Link } from 'react-router-dom';
 
-const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.png`;
+const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.jpg`;
 
 const FAQS = [
   {

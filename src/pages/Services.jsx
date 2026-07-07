@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/shared/ScrollReveal';
 
-const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.png`;
+const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.jpg`;
 
 const SERVICES = [
   {
@@ -9,56 +9,56 @@ const SERVICES = [
     label: 'FULL SERVICE',
     desc: 'From initial concept to final planting, we handle every phase of your custom landscape build. Our team brings your unique vision to life with precision and craftsmanship.',
     bullets: ['Custom design consultation', 'Full project management', 'Residential and commercial', 'Licensed subcontractor network'],
-    img: `${import.meta.env.BASE_URL}images/service-landscape.png`,
+    img: `${import.meta.env.BASE_URL}images/service-landscape.jpg`,
   },
   {
     name: 'HARDSCAPE',
     label: 'STRUCTURAL',
     desc: 'We build the structural elements that define your outdoor space — patios, walkways, retaining walls, fire pits, pergolas, and more.',
     bullets: ['Concrete pavers and natural stone', 'Retaining walls and raised planters', 'Outdoor kitchens and fire features', 'Pergolas and shade structures'],
-    img: `${import.meta.env.BASE_URL}images/service-hardscape.png`,
+    img: `${import.meta.env.BASE_URL}images/service-hardscape.jpg`,
   },
   {
     name: 'PLANTING SERVICES',
     label: 'BOTANICAL',
     desc: 'We source and install trees, shrubs, groundcover, perennials, and seasonal color to bring life and texture to your landscape.',
     bullets: ['Custom planting plans', 'Trees and large specimen plants', 'Native and drought-tolerant options', 'Seasonal color rotations'],
-    img: `${import.meta.env.BASE_URL}images/service-planting.png`,
+    img: `${import.meta.env.BASE_URL}images/service-planting.jpg`,
   },
   {
     name: 'IRRIGATION SYSTEMS',
     label: 'WATER MANAGEMENT',
     desc: 'Smart water-efficient irrigation systems designed for California\'s climate and your specific landscape layout.',
     bullets: ['Drip and spray system design', 'Smart controller installation', 'System repair and upgrades', 'Water conservation focused'],
-    img: `${import.meta.env.BASE_URL}images/service-irrigation.png`,
+    img: `${import.meta.env.BASE_URL}images/service-irrigation.jpg`,
   },
   {
     name: 'OUTDOOR LIGHTING',
     label: 'ILLUMINATION',
     desc: 'Professionally designed lighting that enhances the beauty of your landscape at night while adding safety and security.',
     bullets: ['Architectural uplighting', 'Path and step lighting', 'Accent and feature lighting', 'Low-voltage LED systems'],
-    img: `${import.meta.env.BASE_URL}images/service-lighting.png`,
+    img: `${import.meta.env.BASE_URL}images/service-lighting.jpg`,
   },
   {
     name: 'SYNTHETIC TURF',
     label: 'ARTIFICIAL LAWN',
     desc: 'Premium synthetic turf that looks and feels like real grass — lush, green, and beautiful year-round without the water bill.',
     bullets: ['Premium synthetic turf installation', 'Pet-friendly and child-safe materials', 'Edging and border finishing', 'Long-lasting and low-maintenance'],
-    img: `${import.meta.env.BASE_URL}images/service-turf.png`,
+    img: `${import.meta.env.BASE_URL}images/service-turf.jpg`,
   },
   {
     name: 'SOD INSTALLATION',
     label: 'NATURAL LAWN',
     desc: 'Professional natural sod installation for a lush, healthy, living lawn. We prepare the ground correctly so your sod takes root and thrives.',
     bullets: ['Ground preparation and grading', 'Premium sod varieties available', 'Edging and border work', 'Post-installation care guidance'],
-    img: `${import.meta.env.BASE_URL}images/service-sod.png`,
+    img: `${import.meta.env.BASE_URL}images/service-sod.jpg`,
   },
   {
     name: 'DRAINAGE SOLUTIONS',
     label: 'WATER MANAGEMENT',
     desc: 'We identify and solve drainage issues before they turn into costly damage — keeping your property protected and your landscape looking its best.',
     bullets: ['French drain design and installation', 'Channel and surface drains', 'Grading and slope correction', 'Downspout and runoff management'],
-    img: `${import.meta.env.BASE_URL}images/service-drainage.png`,
+    img: `${import.meta.env.BASE_URL}images/service-drainage.jpg`,
   },
 ];
 

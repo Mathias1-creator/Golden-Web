@@ -2,21 +2,21 @@ import { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 
-const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.png`;
+const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.jpg`;
 
 const IMAGES = [
-  { src: `${import.meta.env.BASE_URL}images/gallery-1.png`, alt: 'Custom stone patio', category: 'hardscape' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-2.png`, alt: 'Residential garden planting', category: 'planting' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-3.png`, alt: 'Pathway lighting design', category: 'lighting' },
-  { src: `${import.meta.env.BASE_URL}images/service-sod.png`, alt: 'Sod lawn installation', category: 'turf' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-5.png`, alt: 'Retaining wall with uplighting', category: 'hardscape' },
-  { src: `${import.meta.env.BASE_URL}images/service-drainage.png`, alt: 'Irrigation system installation', category: 'irrigation' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-7.png`, alt: 'Outdoor kitchen and dining', category: 'hardscape' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-8.png`, alt: 'Lit garden pathway at night', category: 'lighting' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-9.png`, alt: 'Fire pit with stone seating', category: 'hardscape' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-10.png`, alt: 'Modern pergola structure', category: 'hardscape' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-11.png`, alt: 'Drought-tolerant native plantings', category: 'planting' },
-  { src: `${import.meta.env.BASE_URL}images/gallery-12.png`, alt: 'Complete backyard transformation', category: 'hardscape' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-1.jpg`, alt: 'Custom stone patio', category: 'hardscape' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-2.jpg`, alt: 'Residential garden planting', category: 'planting' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-3.jpg`, alt: 'Pathway lighting design', category: 'lighting' },
+  { src: `${import.meta.env.BASE_URL}images/service-sod.jpg`, alt: 'Sod lawn installation', category: 'turf' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-5.jpg`, alt: 'Retaining wall with uplighting', category: 'hardscape' },
+  { src: `${import.meta.env.BASE_URL}images/service-drainage.jpg`, alt: 'Irrigation system installation', category: 'irrigation' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-7.jpg`, alt: 'Outdoor kitchen and dining', category: 'hardscape' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-8.jpg`, alt: 'Lit garden pathway at night', category: 'lighting' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-9.jpg`, alt: 'Fire pit with stone seating', category: 'hardscape' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-10.jpg`, alt: 'Modern pergola structure', category: 'hardscape' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-11.jpg`, alt: 'Drought-tolerant native plantings', category: 'planting' },
+  { src: `${import.meta.env.BASE_URL}images/gallery-12.jpg`, alt: 'Complete backyard transformation', category: 'hardscape' },
 ];
 
 const FILTERS = ['All', 'Hardscape', 'Planting', 'Irrigation', 'Lighting', 'Turf'];

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import GoldParticles from '../shared/GoldParticles';
 
-const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-home.png`;
+const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-home.jpg`;
 const PHRASES = ['DREAM IT. BUILD IT.', 'YOUR VISION. OUR CRAFT.', 'LANDSCAPES BUILT TO LAST.'];
 
 export default function HeroSection() {

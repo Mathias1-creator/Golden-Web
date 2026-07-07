@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 
-const BG = `${import.meta.env.BASE_URL}images/cta-bg.png`;
+const BG = `${import.meta.env.BASE_URL}images/cta-bg.jpg`;
 
 export default function CTABanner() {
   return (

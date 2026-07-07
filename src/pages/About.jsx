@@ -2,8 +2,8 @@ import { Hammer, ShieldCheck, Eye, Heart } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import CTABanner from '../components/shared/CTABanner';
 
-const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.png`;
-const TEAM_IMG = `${import.meta.env.BASE_URL}images/team.png`;
+const HERO_IMG = `${import.meta.env.BASE_URL}images/hero-services.jpg`;
+const TEAM_IMG = `${import.meta.env.BASE_URL}images/team.jpg`;
 
 const VALUES = [
   { icon: Hammer, title: 'CRAFTSMANSHIP', desc: 'We take pride in every detail, every edge, every plant. Quality is never negotiable.' },
